@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nilavu – Boutique Homestay in Varkala, Kerala</title>
+<meta name="description" content="Nilavu is a quiet boutique homestay in Varkala, Kerala. A short walk from the beach and cafés, made for couples, families and friends to slow down together.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0F1F4D;--cobalt:#1B3A8C;--royal:#2A4BA8;--leaf:#3B6BB5;--mist:#8FA8D8;
+  --ivory:#F6F1E6;--moon:#F3E6C4;--gold:#E0A93B;--amber:#F2B84B;--sand:#EFE8D6;
+  --goldtext:#9A6B0F;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--navy);line-height:1.7;font-size:1.02rem;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15}
+h2{font-size:clamp(2rem,4.2vw,3rem);margin-bottom:14px}
+section{padding:88px 6vw;position:relative}
+.wrap{max-width:1120px;margin:0 auto}
+.eyebrow{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--goldtext);font-weight:700;margin-bottom:12px}
+.lead{max-width:640px;font-size:1.1rem;opacity:.85;margin-bottom:40px}
+.dark{background:var(--navy);color:var(--ivory)}
+.dark .eyebrow{color:var(--amber)}
+.btn{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.9rem;letter-spacing:.06em;text-decoration:none;padding:14px 28px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--amber)}
+.btn-line{border-color:var(--cobalt);color:var(--cobalt);background:transparent}
+.btn-line:hover{background:var(--cobalt);color:var(--ivory)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* nav */
+header{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:22px 6vw}
+.brand{font-family:var(--serif);font-size:1.7rem;color:var(--cobalt);text-decoration:none;font-weight:500}
+nav{display:flex;align-items:center;gap:30px}
+nav a{text-decoration:none;font-size:.9rem;font-weight:600;color:var(--navy)}
+nav a:hover{color:var(--goldtext)}
+nav .btn{padding:10px 22px;color:var(--navy)}
+nav .btn:hover{color:var(--navy)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);min-height:100vh;padding:0;background:var(--ivory)}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:130px 2vw 80px 6vw}
+.stars{width:64px;height:48px;margin-bottom:6px}
+.hero h1{font-size:clamp(4.6rem,10vw,8.6rem);color:var(--cobalt);line-height:.95;letter-spacing:.01em}
+.sub{font-size:.8rem;letter-spacing:.34em;color:var(--goldtext);font-weight:700;text-transform:uppercase;margin-top:10px}
+.ml{font-size:1.25rem;color:var(--goldtext);margin-top:22px}
+.tagline{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--navy);margin:8px 0 14px}
+.hero-text p.intro{max-width:430px;opacity:.85;margin-bottom:32px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+/* the image has a white ground; multiply lets the ivory wall show through it */
+.scene{display:flex;align-items:center;padding:90px 0 40px}
+.scene img{width:100%;height:auto;mix-blend-mode:multiply}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* wave dividers */
+.wave{display:block;width:100%;height:70px;margin-bottom:-1px}
+
+/* story */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.cols p{margin-bottom:18px}
+.quote{grid-column:1/-1;border-left:3px solid var(--gold);padding:6px 0 6px 24px;font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);font-style:italic;color:var(--cobalt);line-height:1.3;margin-top:10px}
+
+/* who it's for */
+.aud{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.acard{border-radius:20px;padding:30px;display:flex;flex-direction:column;min-height:340px}
+.acard svg{width:54px;height:54px;margin-bottom:16px}
+.acard h3{font-size:1.9rem}
+.acard .tag{font-family:var(--serif);font-style:italic;font-size:1.2rem;opacity:.9;margin-bottom:18px}
+.acard ul{list-style:none;font-size:.92rem;margin-top:auto}
+.acard li{padding:8px 0;border-top:1px solid rgba(255,255,255,.2)}
+.a1{background:linear-gradient(160deg,#1B3A8C,#16296a);color:var(--ivory)}
+.a2{background:linear-gradient(160deg,#F3E6C4,#E9D3A0);color:var(--navy)}
+.a2 li{border-color:rgba(15,31,77,.18)}
+.a3{background:linear-gradient(160deg,#3B6BB5,#1B3A8C);color:var(--ivory)}
+.feel{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.feel span{font-size:.82rem;padding:8px 18px;border-radius:999px;border:1px solid var(--mist)}
+
+/* the home */
+.spaces{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;border:1px solid rgba(15,31,77,.1);border-radius:18px;padding:26px;box-shadow:0 6px 24px rgba(15,31,77,.05)}
+.card h3{font-size:1.5rem;color:var(--cobalt);margin-bottom:8px}
+.card ul{list-style:none;font-size:.92rem}
+.card li{padding:7px 0;border-top:1px solid rgba(15,31,77,.08)}
+.card li:first-child{border:none}
+.room{display:flex;flex-direction:column;align-items:flex-start}
+.room .sleeps{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--goldtext);margin-bottom:8px}
+.room p{font-size:.95rem;opacity:.85;margin-bottom:22px}
+.amen-title{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--cobalt);margin:36px 0 14px}
+.amenities{list-style:none;display:flex;flex-wrap:wrap;gap:12px}
+.amenities li{display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:#fff;border:1px solid rgba(15,31,77,.1);font-size:.9rem;font-weight:600}
+.amenities svg{width:20px;height:20px;fill:none;stroke:var(--gold);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.room .btn{margin-top:auto;padding:11px 22px}
+
+
+/* location */
+.dist{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
+.d{text-align:center;padding:26px 12px;border-radius:18px;background:#fff;border:1px solid rgba(15,31,77,.1)}
+.d .n{font-family:var(--serif);font-size:2.4rem;color:var(--cobalt);line-height:1.1}
+.d .l{font-size:.86rem;opacity:.85;margin-top:4px}
+
+/* book */
+.book{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.book .contact{list-style:none;margin-top:8px}
+.book .contact li{padding:12px 0;border-top:1px solid rgba(246,241,230,.18)}
+.book .contact b{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--amber)}
+.book .contact a{text-decoration:none}
+.book .contact a:hover{color:var(--amber)}
+.book .btn{margin-top:4px}
+
+/* booking modal */
+dialog{margin:auto;border:none;border-radius:22px;padding:0;width:min(440px,calc(100vw - 32px));background:var(--ivory);color:var(--navy);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+dialog::backdrop{background:rgba(15,31,77,.72)}
+dialog{max-height:calc(100dvh - 24px);overflow-y:auto}
+dialog form{padding:30px 26px 26px;display:grid;gap:16px;position:relative}
+dialog h2{font-size:1.8rem;margin-bottom:0;padding-right:34px}
+dialog .btn{text-align:center}
+dialog .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+
+/* date picker */
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field{text-align:left;font:inherit;padding:10px 14px;border-radius:14px;border:1.5px solid rgba(15,31,77,.16);background:#fff;color:var(--navy);cursor:pointer;transition:border-color .2s,box-shadow .2s}
+.field b{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--goldtext)}
+.field span{font-family:var(--serif);font-size:1.3rem;line-height:1.3}
+.field span.empty{opacity:.45;font-style:italic}
+.field.active{border-color:var(--gold);box-shadow:0 0 0 3px rgba(224,169,59,.22)}
+.cal{--band:rgba(143,168,216,.3);background:#fff;border:1px solid rgba(15,31,77,.1);border-radius:18px;padding:16px 14px 14px;box-shadow:0 6px 24px rgba(15,31,77,.06)}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cal-title{font-family:var(--serif);font-size:1.5rem;color:var(--cobalt)}
+.cal-nav{width:36px;height:36px;border-radius:50%;border:1px solid rgba(15,31,77,.18);background:none;color:var(--cobalt);cursor:pointer;display:grid;place-items:center;transition:background .2s,color .2s}
+.cal-nav:hover:not(:disabled){background:var(--cobalt);color:var(--ivory)}
+.cal-nav:disabled{opacity:.3;cursor:default}
+.cal-nav svg{width:14px;height:14px}
+.cal-week,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal-week{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-align:center;color:var(--goldtext);padding-bottom:6px}
+.cal-grid{row-gap:3px}
+.day{height:40px;padding:0;border:none;background:none;font:inherit;font-size:.92rem;color:var(--navy);cursor:pointer}
+.day span{position:relative;display:grid;place-items:center;width:40px;height:40px;max-width:100%;margin:0 auto;border-radius:50%;transition:background .15s,color .15s,box-shadow .15s}
+.day:disabled{opacity:.3;cursor:default}
+.day:not(:disabled):hover span{box-shadow:inset 0 0 0 1.5px var(--gold)}
+.day.today span::after{content:'';position:absolute;bottom:5px;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--gold)}
+.day.band{background:var(--band)}
+.day.band:nth-child(7n+1){border-radius:20px 0 0 20px}
+.day.band:nth-child(7n){border-radius:0 20px 20px 0}
+.day.band.first{background:linear-gradient(to right,transparent 50%,var(--band) 50%)}
+.day.band.last{background:linear-gradient(to left,transparent 50%,var(--band) 50%)}
+.day.last span{box-shadow:inset 0 0 0 1.5px var(--cobalt)}
+.day.sel span{background:var(--cobalt);color:var(--ivory);font-weight:700;box-shadow:0 4px 12px rgba(27,58,140,.35)}
+.day:focus-visible{outline:none}
+.day:focus-visible span{outline:3px solid var(--gold);outline-offset:1px}
+.cal-summary{text-align:center;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--cobalt);min-height:1.7em}
+dialog .close{position:absolute;top:12px;right:14px;width:36px;height:36px;border:none;background:none;font-size:1.7rem;line-height:1;color:var(--navy);cursor:pointer;border-radius:50%}
+dialog .close:hover{background:rgba(15,31,77,.08)}
+
+footer{background:var(--navy);color:var(--ivory);text-align:center;padding:34px 6vw 44px;border-top:1px solid rgba(246,241,230,.14);font-size:.88rem}
+footer .brand{color:var(--ivory);display:block;margin-bottom:4px}
+footer span{opacity:.7}
+
+@media(max-width:860px){
+  nav a:not(.btn){display:none}
+}
+@media(max-width:860px){
+  section{padding:64px 6vw}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-text{padding:110px 6vw 24px}
+  .scene{padding:0 0 32px}
+  .cols,.book{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:400px){
+  dialog form{padding:26px 16px 18px}
+  .cal{padding:14px 8px 10px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="#top">Nilavu</a>
+  <nav aria-label="Main">
+    <a href="#story">Story</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#location">Location</a>
+    <button class="btn btn-gold" type="button" data-book>Book a stay</button>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO: ivory wall with the wave cut opening onto the moonlit sea -->
+<section class="hero">
+  <div class="hero-text">
+    <svg class="stars" viewBox="0 0 64 48" aria-hidden="true"><g fill="#E0A93B"><path d="M18 6l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/><path d="M48 26l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></g></svg>
+    <h1>Nilavu</h1>
+    <div class="sub">Boutique Homestay · Varkala</div>
+    <div class="ml" lang="ml">നിലാവ് · moonlight</div>
+    <p class="tagline">Rest together, under the moon.</p>
+    <p class="intro">A quiet home a short walk from the sea. Tucked away from the cliff-road crowd, close enough to stroll to the beach and cafés.</p>
+    <div class="cta">
+      <button class="btn btn-gold" type="button" data-book>Book a stay</button>
+      <a class="btn btn-line" href="#story">Our story</a>
+    </div>
+  </div>
+
+  <div class="scene">
+    <img src="images/hero-nilavu-girl.jpeg" alt="Illustration of a girl in a white dress sitting beside a glowing lantern, watching the full moon rise over the sea" width="1420" height="830">
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap">
+    <div class="eyebrow">The story behind the name</div>
+    <h2>Why Nilavu?</h2>
+    <p class="lead">In Malayalam, <i>nilavu</i> (<span lang="ml">നിലാവ്</span>) means moonlight. Not the moon itself, but the soft light it gives back to the world.</p>
+    <div class="cols">
+      <div>
+        <p>Varkala by day is bright and busy: cliffs, cafés, music, motorbikes. But there is a moment after the sun drops into the Arabian Sea when everything exhales. The waves become the only sound and the water turns to silver.</p>
+        <p>Nilavu began with one picture: a girl sitting quietly by the sea under a full moon, lantern glowing beside her, watching the waves. She isn't waiting for anything. She's simply <i>there</i>, calm and unhurried, and the world feels like it has paused just for her.</p>
+      </div>
+      <div>
+        <p>That feeling is what this home is built to give. Moonlight doesn't shout. It softens edges, lights the path, and makes everyone feel at ease. Nilavu sits a little inside from the crowd, close enough to walk to the beach and cafés, quiet enough to actually rest.</p>
+        <p>Whether you arrive as a couple, a family or a group of friends, you're tired from travel, from work, from noise. You leave lighter. Like the moon, we don't do much. We hold the light, and let you find your calm.</p>
+      </div>
+      <p class="quote">"Like moonlight, Nilavu is where you come to be comforted, and to be still, together."</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<svg class="wave" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70V40C200 0 380 70 620 34C850 0 1020 56 1200 20V70Z" fill="#0F1F4D"/></svg>
+<section class="dark" id="stay">
+  <div class="wrap">
+    <div class="eyebrow">Who it's for</div>
+    <h2>Made for time spent together</h2>
+    <p class="lead">A place to slow down with the people you love. Intimate enough for two, safe and easy for a family, relaxed enough for a group of friends.</p>
+    <div class="aud">
+      <div class="acard a1">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M30 52C8 36 6 20 18 14C24 11 29 15 30 19C31 15 36 11 42 14C54 20 52 36 30 52Z" fill="none" stroke="#F2B84B" stroke-width="3"/></svg>
+        <h3>Couples</h3><div class="tag">Slow evenings, quiet mornings</div>
+        <ul><li>Private terrace or balcony with lantern light</li><li>Moon-facing window seats, candlelit corners</li><li>Sunset walks to the beach, dinners at nearby cafés</li><li>Flowers on the bed, warm dim lighting</li></ul>
+      </div>
+      <div class="acard a2">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="20" cy="18" r="7" fill="#1B3A8C"/><circle cx="40" cy="22" r="6" fill="#1B3A8C"/><circle cx="30" cy="38" r="5" fill="#E0A93B"/><path d="M8 54q0-18 12-18q12 0 12 18zM32 54q0-14 9-14q9 0 9 14z" fill="#1B3A8C"/></svg>
+        <h3>Families</h3><div class="tag">Home comforts, room to breathe</div>
+        <ul><li>Double rooms that suit a family</li><li>Green courtyard for kids, swing and games</li><li>Home-style breakfast, tea on the veranda</li><li>Calm, away from cliff-road noise</li></ul>
+      </div>
+      <div class="acard a3">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="16" cy="22" r="6" fill="#F3E6C4"/><circle cx="30" cy="16" r="6" fill="#E0A93B"/><circle cx="44" cy="22" r="6" fill="#F3E6C4"/><path d="M4 50q0-16 12-16q12 0 12 16zM18 50q0-18 12-18q12 0 12 18zM32 50q0-16 12-16q12 0 12 16z" fill="#F3E6C4" opacity=".9"/></svg>
+        <h3>Friends</h3><div class="tag">Laughter, stories, no rush</div>
+        <ul><li>Cosy shared lounge with floor seating and board games</li><li>Courtyard for night chats under the moon</li><li>Easy café-hopping, five minutes on foot</li><li>4-sharing rooms for the whole group</li></ul>
+      </div>
+    </div>
+    <div class="feel"><span>Unhurried</span><span>Intimate</span><span>Safe &amp; welcoming</span><span>Homely</span><span>Quietly beautiful</span><span>Quality time</span></div>
+  </div>
+</section>
+<svg class="wave" style="background:#0F1F4D" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70V30C180 66 400 0 640 36C860 68 1040 10 1200 40V70Z" fill="#EFE8D6"/></svg>
+
+<!-- ROOMS -->
+<section id="rooms" style="background:var(--sand)">
+  <div class="wrap">
+    <div class="eyebrow">Rooms</div>
+    <h2>Choose your room</h2>
+    <p class="lead">Two ways to stay, whether you're two, a family, or a group travelling together.</p>
+    <div class="spaces">
+      <div class="card room">
+        <div class="sleeps">Sleeps 2</div>
+        <h3>Double room</h3>
+        <p>A private room for couples and families.</p>
+        <button class="btn btn-line" type="button" data-book data-room="Double room">Book this room</button>
+      </div>
+      <div class="card room">
+        <div class="sleeps">Sleeps 4</div>
+        <h3>4-sharing room</h3>
+        <p>A room for four. Good for friends or a larger family.</p>
+        <button class="btn btn-line" type="button" data-book data-room="4-sharing room with private toilet">Book this room</button>
+      </div>
+    </div>
+    <div class="amen-title">In every room</div>
+    <ul class="amenities">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10M9 4l3 3 3-3M9 20l3-3 3 3"/></svg>Air conditioning</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg>Hot water</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0M6 13a9 9 0 0 1 12 0M9.5 16.5a4 4 0 0 1 5 0"/><circle cx="12" cy="19.5" r=".8"/></svg>Wi-Fi</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v4h-4zM8 7h8l1 3v10a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V10z"/></svg>Toiletries</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h9v4H4zM13 10h7M6 5v3M8.5 5v3M11 5v3"/></svg>Dental kit</li>
+    </ul>
+  </div>
+</section>
+
+<svg class="wave" style="background:#EFE8D6" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70V30C180 66 400 0 640 36C860 68 1040 10 1200 40V70Z" fill="#F6F1E6"/></svg>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="wrap">
+    <div class="eyebrow">Location</div>
+    <h2>Quiet, but connected</h2>
+    <p class="lead">Tucked inside, away from the cliff noise, with everything a short walk or ride away.</p>
+    <div class="dist">
+      <div class="d"><div class="n">500 m</div><div class="l">Cafés, incl. Café Trip is Life &amp; Café Sarwa</div></div>
+      <div class="d"><div class="n">600 m</div><div class="l">Enikka beach</div></div>
+      <div class="d"><div class="n">1 km</div><div class="l">Papanasam beach</div></div>
+      <div class="d"><div class="n">1.5 km</div><div class="l">North Cliff</div></div>
+      <div class="d"><div class="n">Nearby</div><div class="l">Varkala temple</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<svg class="wave" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70V40C200 0 380 70 620 34C850 0 1020 56 1200 20V70Z" fill="#0F1F4D"/></svg>
+<section class="dark" id="book">
+  <div class="wrap book">
+    <div>
+      <div class="eyebrow">Book a stay</div>
+      <h2>For slow days and full moons</h2>
+      <p class="lead" style="margin-bottom:24px">Pick your dates and we'll reply on WhatsApp with availability.</p>
+      <button class="btn btn-gold" type="button" data-book>Book a stay</button>
+    </div>
+    <ul class="contact">
+      <li><b>Call / WhatsApp</b><a href="tel:+918848343332">+91 88483 43332</a></li>
+      <li><b>Email</b><a href="mailto:nilavuhomestay@gmail.com">nilavuhomestay@gmail.com</a></li>
+      <li><b>Find us</b>Varkala, Kerala, India</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<dialog id="booking" aria-labelledby="booking-title">
+  <form id="enquiry" method="dialog">
+    <button class="close" type="button" aria-label="Close">&times;</button>
+    <h2 id="booking-title">Book a stay</h2>
+    <div class="fields">
+      <button class="field" type="button" data-field="in"><b>Check-in</b><span></span></button>
+      <button class="field" type="button" data-field="out"><b>Check-out</b><span></span></button>
+    </div>
+    <div class="cal">
+      <div class="cal-head">
+        <button class="cal-nav" type="button" data-step="-1" aria-label="Previous month"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2L4 7l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="cal-title" aria-live="polite"></div>
+        <button class="cal-nav" type="button" data-step="1" aria-label="Next month"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <div class="cal-week" aria-hidden="true"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="cal-grid"></div>
+    </div>
+    <div class="cal-summary" aria-live="polite"></div>
+    <button class="btn btn-gold" type="submit">Send enquiry</button>
+  </form>
+</dialog>
+
+<footer>
+  <a class="brand" href="#top">Nilavu</a>
+  <span>Boutique Homestay · Varkala, Kerala</span>
+</footer>
+
+<script>
+// WhatsApp number: country code + number, digits only
+var WHATSAPP_NUMBER = '918848343332';
+
+var dialog = document.getElementById('booking');
+var form = document.getElementById('enquiry');
+
+function isoDate(d) {
+  return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+}
+function parseDate(v) {
+  var p = v.split('-');
+  return new Date(+p[0], p[1] - 1, +p[2]);
+}
+function prettyDate(v) {
+  return parseDate(v).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function shortDate(v) {
+  return parseDate(v).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
+}
+function nightsBetween(a, b) {
+  return Math.round((parseDate(b) - parseDate(a)) / 864e5);
+}
+
+// date picker state: dates are ISO strings (yyyy-mm-dd), so plain string comparison orders them
+var picker = { checkin: '', checkout: '', active: 'in', hover: '', year: 0, month: 0 };
+var grid = dialog.querySelector('.cal-grid');
+var calTitle = dialog.querySelector('.cal-title');
+var summary = dialog.querySelector('.cal-summary');
+var prevBtn = dialog.querySelector('[data-step="-1"]');
+var sendBtn = form.querySelector('[type=submit]');
+var fields = { in: dialog.querySelector('[data-field=in]'), out: dialog.querySelector('[data-field=out]') };
+
+// build the day buttons for the month in view
+function buildMonth() {
+  var now = new Date(), today = isoDate(now);
+  var days = new Date(picker.year, picker.month + 1, 0).getDate();
+  calTitle.textContent = new Date(picker.year, picker.month, 1).toLocaleDateString('en-IN', { month: 'long', year: 'numeric' });
+  prevBtn.disabled = picker.year === now.getFullYear() && picker.month === now.getMonth();
+  grid.innerHTML = '';
+  for (var i = new Date(picker.year, picker.month, 1).getDay(); i > 0; i--) grid.appendChild(document.createElement('div'));
+  for (var d = 1; d <= days; d++) {
+    var iso = isoDate(new Date(picker.year, picker.month, d));
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'day' + (iso === today ? ' today' : '');
+    b.dataset.date = iso;
+    b.disabled = iso < today;
+    b.setAttribute('aria-label', prettyDate(iso));
+    b.innerHTML = '<span>' + d + '</span>';
+    grid.appendChild(b);
+  }
+  paint();
+}
+
+// refresh selection, range band, field labels and summary without rebuilding the grid
+function paint() {
+  var p = picker;
+  // while choosing check-out, the hovered day previews the end of the range
+  var end = p.checkout || (p.active === 'out' && p.checkin && p.hover > p.checkin ? p.hover : '');
+  grid.querySelectorAll('.day').forEach(function (b) {
+    var d = b.dataset.date, sel = d === p.checkin || d === p.checkout;
+    b.classList.toggle('sel', sel);
+    b.classList.toggle('band', !!end && d >= p.checkin && d <= end);
+    b.classList.toggle('first', d === p.checkin);
+    b.classList.toggle('last', d === end);
+    b.setAttribute('aria-pressed', sel);
+  });
+  [['in', p.checkin], ['out', p.checkout]].forEach(function (f) {
+    var span = fields[f[0]].querySelector('span');
+    span.textContent = f[1] ? shortDate(f[1]) : 'Add date';
+    span.classList.toggle('empty', !f[1]);
+    fields[f[0]].classList.toggle('active', p.active === f[0]);
+  });
+  if (p.checkin && p.checkout) {
+    var n = nightsBetween(p.checkin, p.checkout);
+    summary.textContent = n + (n === 1 ? ' night' : ' nights') + ' under the moon';
+  } else {
+    summary.textContent = p.active === 'in' ? 'Select your check-in date' : 'Select your check-out date';
+  }
+  sendBtn.disabled = !(p.checkin && p.checkout);
+}
+
+function pick(d) {
+  var p = picker;
+  if (p.active === 'out' && p.checkin && d > p.checkin) {
+    p.checkout = d;
+    p.active = 'in';
+  } else {
+    p.checkin = d;
+    if (p.checkout && p.checkout <= d) p.checkout = '';
+    p.active = 'out';
+  }
+  p.hover = '';
+  paint();
+}
+
+grid.addEventListener('click', function (e) {
+  var b = e.target.closest('.day');
+  if (b && !b.disabled) pick(b.dataset.date);
+});
+function preview(e) {
+  var b = e.target.closest('.day');
+  picker.hover = b && !b.disabled ? b.dataset.date : '';
+  paint();
+}
+grid.addEventListener('mouseover', preview);
+grid.addEventListener('focusin', preview);
+grid.addEventListener('mouseleave', function () { picker.hover = ''; paint(); });
+// arrow keys move between days
+grid.addEventListener('keydown', function (e) {
+  var step = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 }[e.key];
+  if (!step) return;
+  var days = Array.prototype.slice.call(grid.querySelectorAll('.day'));
+  var target = days[days.indexOf(document.activeElement) + step];
+  if (target && !target.disabled) { e.preventDefault(); target.focus(); }
+});
+
+dialog.querySelectorAll('.cal-nav').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var m = new Date(picker.year, picker.month + +b.dataset.step, 1);
+    picker.year = m.getFullYear();
+    picker.month = m.getMonth();
+    buildMonth();
+  });
+});
+['in', 'out'].forEach(function (k) {
+  fields[k].addEventListener('click', function () {
+    // check-out can only be chosen once there is a check-in
+    picker.active = k === 'out' && !picker.checkin ? 'in' : k;
+    paint();
+  });
+});
+
+document.querySelectorAll('[data-book]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    // buttons on a room card carry the room name; the general buttons leave it blank
+    picker.room = b.dataset.room || '';
+    document.getElementById('booking-title').textContent = picker.room ? 'Book the ' + picker.room : 'Book a stay';
+    var start = picker.checkin ? parseDate(picker.checkin) : new Date();
+    picker.year = start.getFullYear();
+    picker.month = start.getMonth();
+    picker.active = picker.checkin && !picker.checkout ? 'out' : 'in';
+    buildMonth();
+    dialog.showModal();
+  });
+});
+dialog.querySelector('.close').addEventListener('click', function () { dialog.close(); });
+// click on the backdrop closes the modal
+dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  if (!(picker.checkin && picker.checkout)) return;
+  var msg = 'Hello Nilavu! I would like to enquire about a stay.\n' +
+    (picker.room ? 'Room: ' + picker.room + '\n' : '') +
+    'Check-in: ' + prettyDate(picker.checkin) + '\n' +
+    'Check-out: ' + prettyDate(picker.checkout) + '\n' +
+    'Nights: ' + nightsBetween(picker.checkin, picker.checkout) + '\n' +
+    'Please let me know if it is available.';
+  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  dialog.close();
+});
+</script>
+</body>
+</html>
